@@ -155,6 +155,9 @@ body{
     .search-box{
         width: 75%;
     }
+    html{
+        font-size: 14px;
+    }
  }
  @media screen and (max-width: 768px) {
 }
