@@ -3,7 +3,7 @@ let cartona;
 content = document.getElementById("content")
 async function getWeather(cityName){
 
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=e46b23933a194dd498b143950241901&q=${cityName}&days=3`)
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e46b23933a194dd498b143950241901&q=${cityName}&days=3`)
     if (response.status==400){
         content.classList.remove("justify-content-evenly");
         content.classList.add("justify-content-center");
