@@ -29,15 +29,14 @@ async function getWeather(cityName){
     else if( response.status == 200){
         finalResponse = await response.json();
         let weatherArray = finalResponse.forecast.forecastday;
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        let cityDate = new Date(`${finalResponse.location.localtime}`);
         let cartona="";
         content.classList.add("justify-content-evenly");
         content.classList.remove("justify-content-center");
+        console.log(weatherArray[0].date);
     for(let i=0;i<weatherArray.length;i++){
         cartona+=`
             <div class="weather col-lg-4 col-md-6 col-sm-12">
-            <p id="date" class="text-center">${cityDate.getDate()+i +" "+ months[cityDate.getMonth()] +" "+ cityDate.getFullYear()}</p>
+            <p id="date" class="text-center">${weatherArray[i].date}</p>
             <div class="weather-info">
                 <div class="weather-desc ">
                     <img src="${weatherArray[i].day.condition.icon ? 'http:'+ weatherArray[0].day.condition.icon : 'images/404.png'}" alt="" class="image">
