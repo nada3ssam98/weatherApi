@@ -37,7 +37,7 @@ async function getWeather(cityName){
     for(let i=0;i<weatherArray.length;i++){
         cartona+=`
             <div class="weather col-lg-4 col-md-6 col-sm-12">
-            <p id="date" class="text-center">${cityDate.getDate() +" "+ months[cityDate.getMonth()] +" "+ cityDate.getFullYear()}</p>
+            <p id="date" class="text-center">${cityDate.getDate()+i +" "+ months[cityDate.getMonth()] +" "+ cityDate.getFullYear()}</p>
             <div class="weather-info">
                 <div class="weather-desc ">
                     <img src="${weatherArray[i].day.condition.icon ? 'http:'+ weatherArray[0].day.condition.icon : 'images/404.png'}" alt="" class="image">
